@@ -8,44 +8,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
-	tapping-term-ms = <400>;
-};
-
 / { 
 	behaviors {
-		lht: left_positional_hold_tap {
+		hm: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
-			label = "LEFT_POSITIONAL_HOLD_TAP";
+			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
+			tapping-term-ms = <150>;
 			quick-tap-ms = <0>;
-			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <
-				5  6  7  8  9 
-				15 16 17 18 19 
-				25 26 27 28 29 
-				32 33 
-			>;
-		}; 
-		
-		rht: right_positional_hold_tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "RIGHT_POSITIONAL_HOLD_TAP";
-			#binding-cells = <2>;
 			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <0>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <
-				0  1  2  3  4 
-				10 11 12 13 14
-				20 21 22 23 24
-				30 31
-			>;
-		}; 
-	}; 
+		};
+	};
 	
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
@@ -61,7 +35,7 @@
 		default_layer {
 			bindings = <
 				&kp Q 		&kp W 		&kp F 		&kp P 		&kp B 			&kp J 		&kp L 		&kp U 		&kp Y 		&kp QUOT 
-				&kp A 		&lht LGUI R 	&lht LALT S 	&lht LCTRL T 	&kp G 			&kp M 		&rht RCTRL N 	&rht RALT E 	&rht RGUI I 	&kp O 
+				&kp A 		&hm LGUI R 	&hm LALT S 	&hm LCTRL T 	&kp G 			&kp M 		&hm RCTRL N 	&hm RALT E 	&hm RGUI I 	&kp O 
 				&kp Z 		&kp X 		&kp C 		&kp D 		&kp V 			&kp K 		&kp H 		&kp CMMA 	&kp DOT 	&kp SLASH 
 										&mo 1 		&kp LEFT_SHIFT 		&kp SPACE 	&mo 2 
 			>;
@@ -70,7 +44,7 @@
 		left_layer {
 			bindings = <
 				&kp HOME 	&kp PAGE_DOWN 	&kp PAGE_UP 	&kp END 	&kp ESCAPE 		&kp KP_PLUS 	&kp N7 		&kp N8 		&kp N9 		&kp KP_MULTIPLY 
-				&kp LEFT_ARROW 	&lht DOWN_ARROW &lht UP_ARROW 	&lht RIGHT_ARROW &kp TAB 		&kp N0 		&rht RCTRL N4 	&rht RALT N5 	&rht RGUI N6 	&kp KP_DOT 
+				&kp LEFT_ARROW 	&kp DOWN_ARROW 	&kp UP_ARROW 	&kp RIGHT_ARROW &kp TAB 		&kp N0 		&hm RCTRL N4 	&hm RALT N5 	&hm RGUI N6 	&kp KP_DOT 
 				&none 		&none 		&kp LC(LS(TAB)) &kp LC(TAB)	&kp DELETE 		&kp KP_MINUS 	&kp N1 		&kp N2 		&kp N3 		&kp KP_DIVIDE 
 										&mo 1 		&kp LEFT_SHIFT 		&kp RETURN 	&mo 2 
 			>;
@@ -88,7 +62,7 @@
 		tri_layer {
 			bindings = <
 				&bt BT_CLR 	&kp C_MUTE 	&kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_BRIGHTNESS_INC 	&none 		&kp F7 		&kp F8 		&kp F9 		&kp F10 
-				&kp PSCRN 	&lht LGUI C_PREV &lht LALT C_PLAY_PAUSE &lht LCTRL C_NEXT &kp C_BRIGHTNESS_DEC &none 	&rht RCTRL F4 	&rht RALT F5 	&rht RGUI F6 	&kp F11 
+				&kp PSCRN 	&hm LGUI C_PREV &hm LALT C_PLAY_PAUSE &hm LCTRL C_NEXT &kp C_BRIGHTNESS_DEC &none 	&hm RCTRL F4 	&hm RALT F5 	&hm RGUI F6 	&kp F11 
 				&bt BT_SEL 4 	&bt BT_SEL 3 	&bt BT_SEL 2 	&bt BT_SEL 1 	&bt BT_SEL 0 		&none 		&kp F1 		&kp F2 		&kp F3 		&kp F12 
 										&trans 		&kp LEFT_SHIFT 		&none 		&trans 
 			>;
