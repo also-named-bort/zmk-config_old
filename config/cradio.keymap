@@ -61,7 +61,7 @@
 		default_layer {
 			bindings = <
 				&kp Q 		&kp W 		&kp F 		&kp P 		&kp B 			&kp J 		&kp L 		&kp U 		&kp Y 		&kp QUOT 
-				&kp A 		&mt LGUI R 	&mt LALT S 	&mt LCTRL T 	&kp G 			&kp M 		&mt RCTRL N 	&mt RALT E 	&mt RGUI I 	&kp O 
+				&kp A 		&lht LGUI R 	&lht LALT S 	&lht LCTRL T 	&kp G 			&kp M 		&rht RCTRL N 	&rht RALT E 	&rht RGUI I 	&kp O 
 				&kp Z 		&kp X 		&kp C 		&kp D 		&kp V 			&kp K 		&kp H 		&kp CMMA 	&kp DOT 	&kp SLASH 
 										&mo 1 		&kp LEFT_SHIFT 		&kp SPACE 	&mo 2 
 			>;
@@ -70,7 +70,7 @@
 		left_layer {
 			bindings = <
 				&kp HOME 	&kp PAGE_DOWN 	&kp PAGE_UP 	&kp END 	&kp ESCAPE 		&kp KP_PLUS 	&kp N7 		&kp N8 		&kp N9 		&kp KP_MULTIPLY 
-				&kp LEFT_ARROW 	&kp DOWN_ARROW 	&kp UP_ARROW 	&kp RIGHT_ARROW &kp TAB 		&kp N0 		&mt RCTRL N4 	&mt RALT N5 	&mt RGUI N6 	&kp KP_DOT 
+				&kp LEFT_ARROW 	&lht DOWN_ARROW &lht UP_ARROW 	&lht RIGHT_ARROW &kp TAB 		&kp N0 		&rht RCTRL N4 	&rht RALT N5 	&rht RGUI N6 	&kp KP_DOT 
 				&none 		&none 		&kp LC(LS(TAB)) &kp LC(TAB)	&kp DELETE 		&kp KP_MINUS 	&kp N1 		&kp N2 		&kp N3 		&kp KP_DIVIDE 
 										&mo 1 		&kp LEFT_SHIFT 		&kp RETURN 	&mo 2 
 			>;
@@ -88,7 +88,7 @@
 		tri_layer {
 			bindings = <
 				&bt BT_CLR 	&kp C_MUTE 	&kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_BRIGHTNESS_INC 	&none 		&kp F7 		&kp F8 		&kp F9 		&kp F10 
-				&kp PSCRN 	&mt C_PREV LGUI &mt C_PLAY_PAUSE LALT &mt C_NEXT LCTRL &kp C_BRIGHTNESS_DEC &none 	&mt RCTRL F4 	&mt RALT F5 	&mt RGUI F6 	&kp F11 
+				&kp PSCRN 	&lht LGUI C_PREV &lht LALT C_PLAY_PAUSE &lht LCTRL C_NEXT &kp C_BRIGHTNESS_DEC &none 	&rht RCTRL F4 	&rht RALT F5 	&rht RGUI F6 	&kp F11 
 				&bt BT_SEL 4 	&bt BT_SEL 3 	&bt BT_SEL 2 	&bt BT_SEL 1 	&bt BT_SEL 0 		&none 		&kp F1 		&kp F2 		&kp F3 		&kp F12 
 										&trans 		&kp LEFT_SHIFT 		&none 		&trans 
 			>;
